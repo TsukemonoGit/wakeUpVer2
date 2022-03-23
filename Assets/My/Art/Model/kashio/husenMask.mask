@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: husenMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 0
+  - m_Path: Armature/Root
+    m_Weight: 0
+  - m_Path: Armature/Root/body
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/hari
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/hari/hari_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/head
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/head/head_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/hand_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/hand_L/hand_L_end
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/hutosasi1_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/hutosasi1_L/hitosasi2_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/hutosasi1_L/hitosasi2_L/hitosasi3_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/hutosasi1_L/hitosasi2_L/hitosasi3_L/hitosasi3_L_end
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/koyubi1_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/koyubi1_L/koyubi2_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/koyubi1_L/koyubi2_L/koyubi3_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/koyubi1_L/koyubi2_L/koyubi3_L/koyubi3_L_end
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/nakayubi1_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/nakayubi1_L/nakayubi2_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/nakayubi1_L/nakayubi2_L/nakayubi3_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/nakayubi1_L/nakayubi2_L/nakayubi3_L/nakayubi3_L_end
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/oyayubi1_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/oyayubi1_L/oyayubi2_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/oyayubi1_L/oyayubi2_L/oyayubi_L
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_L/ude_L/oyayubi1_L/oyayubi2_L/oyayubi_L/oyayubi_L_end
+    m_Weight: 1
+  - m_Path: Armature/Root/body/body.001/upperude_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/hand_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/hand_R/hand_R_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/hutosasi1_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/hutosasi1_R/hitosasi2_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/hutosasi1_R/hitosasi2_R/hitosasi3_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/hutosasi1_R/hitosasi2_R/hitosasi3_R/hitosasi3_R_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/koyubi1_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/koyubi1_R/koyubi2_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/koyubi1_R/koyubi2_R/koyubi3_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/koyubi1_R/koyubi2_R/koyubi3_R/koyubi3_R_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/nakayubi1_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/nakayubi1_R/nakayubi2_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/nakayubi1_R/nakayubi2_R/nakayubi3_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/nakayubi1_R/nakayubi2_R/nakayubi3_R/nakayubi3_R_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/oyayubi1_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/oyayubi1_R/oyayubi2_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/oyayubi1_R/oyayubi2_R/oyayubi_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/body.001/upperude_R/ude_R/oyayubi1_R/oyayubi2_R/oyayubi_R/oyayubi_R_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_L
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_L/Leg_L
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_L/Leg_L/Foot_L
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_L/Leg_L/Foot_L/Foot_L_end
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_R/Leg_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_R/Leg_R/Foot_R
+    m_Weight: 0
+  - m_Path: Armature/Root/body/upperLeg_R/Leg_R/Foot_R/Foot_R_end
+    m_Weight: 0
+  - m_Path: Cube
+    m_Weight: 0
