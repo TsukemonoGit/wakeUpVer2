@@ -19325,7 +19325,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.599369, y: 1}
+    m_SensorSize: {x: 1.5989761, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -22998,6 +22998,7 @@ MonoBehaviour:
   model:
     player: {fileID: 653247363}
     input: {fileID: 1835709345}
+    pause: {fileID: 1835709348}
   CanFly: 0
 --- !u!114 &1835709348
 MonoBehaviour:
@@ -23012,6 +23013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1835709347}
+  _nowPause: 0
 --- !u!114 &1835709349
 MonoBehaviour:
   m_ObjectHideFlags: 0

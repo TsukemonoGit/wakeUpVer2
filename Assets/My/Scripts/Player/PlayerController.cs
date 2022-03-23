@@ -121,7 +121,10 @@ public class PlayerController : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		CameraRotation();
+		if (!gmanager.model.pause._nowPause)
+		{
+			CameraRotation();
+		}
 	}
 
 	private void AssignAnimationIDs()
