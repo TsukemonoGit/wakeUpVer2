@@ -1,0 +1,4 @@
+repository "WakeUpVer2@arekoreUnity@cloud"
+  path "/"
+    smartbranch "/main"     
+     
