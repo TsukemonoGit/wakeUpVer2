@@ -8,7 +8,8 @@ public class Following : MonoBehaviour
     public float minKyori = 0.5f;
     FanzManager manager;
     public float maxSpeed = 6f;
-
+    public float gravity=-9.8f;
+    Vector3 scaleVec = new Vector3(1, 0, 1);
 
     Rigidbody rb;
     Vector3 moveV;
@@ -21,7 +22,7 @@ public class Following : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         LookRotate();
         if (!manager.isFollowing) return;
@@ -29,7 +30,7 @@ public class Following : MonoBehaviour
          moveV = MoveVelocity();
         
         //Debug.Log(moveV);
-        rb.velocity=(moveV);
+        rb.velocity =Vector3.Scale (Vector3.up  , rb.velocity)+Vector3.Scale(scaleVec , moveV);
         
 
     }
