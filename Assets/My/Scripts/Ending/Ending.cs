@@ -10,13 +10,17 @@ public class Ending : MonoBehaviour
     public TMP_Text souhyou;
     int score;
     public int border1;
+    [TextArea]
     public string border1Text;
 
     public int border2;
+    [TextArea]
     public string border1Text2;
 
     public int border3;
+    [TextArea]
     public string border1Text3;
+    [TextArea]
     public string border1Text4;
     private void Start()
     {

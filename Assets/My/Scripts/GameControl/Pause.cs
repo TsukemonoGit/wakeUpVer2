@@ -5,11 +5,11 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
     public GManager manager;
-    bool _nowPause;
-    PlayerController player;
+    public bool _nowPause;
+ //   PlayerController player;
     private void Start()
     {
-        player = manager.model.player;
+        //player = manager.model.player;
     }
     private void Update()
     {
@@ -27,7 +27,7 @@ public class Pause : MonoBehaviour
         if (!_nowPause)
         {
             _nowPause = true;
-           player.enabled = false;
+   //        player.enabled = false;
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -35,7 +35,7 @@ public class Pause : MonoBehaviour
         else
         {
             _nowPause = false;
-           player.enabled = true;
+     //      player.enabled = true;
 
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
