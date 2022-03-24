@@ -45,7 +45,6 @@ public class Following : MonoBehaviour
     void LookRotate()
     {
         Vector3 lengthV = target.transform.position - this.transform.position;
-
         transform.rotation = Quaternion.LookRotation(Vector3.Scale(lengthV, vec));
     }
     private Vector3 MoveVelocity()
@@ -54,7 +53,7 @@ public class Following : MonoBehaviour
     Vector3 lengthV =  target.transform.position - this.transform.position;
         float length = lengthV.magnitude-minKyori;
         
-        transform.rotation = Quaternion.LookRotation(Vector3.Scale(lengthV, vec));
+       // transform.rotation = Quaternion.LookRotation(Vector3.Scale(lengthV, vec));
         float speed = Mathf.Clamp(length, -maxSpeed, maxSpeed);
         anim.SetFloat("Speed", speed);
         lengthV.Normalize();
