@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class burancoManager : MonoBehaviour
 {
-  
+public enum State { noriori,osihiki}
+    public State state = State.osihiki;
+    bool noreru ;
     public testes buranco;
     public string message;
     public string button;
@@ -24,22 +27,29 @@ public class burancoManager : MonoBehaviour
 
     private void Awake()
     {
-  
+
         UIcanvas = UImanager.UICanvas;
         questUI = UImanager.questUI;
         click = GetComponent<ClickBuranco>();
-        fanz = quest.gameObject.GetComponent<FanzController>();
+        if (quest != null)
+        {
+            fanz = quest.gameObject.GetComponent<FanzController>();
+            noreru = false;
+        }
+        else { noreru = true; }
     }
 
     public void TriggerEnter()
     {
- 
-        if (questUI != null && !fanz.isMisshionClear)
+       
+        click.check = true;
+        string[] text = new string[1] { "おす" };
+        UIcanvas.SetCanvas("ぶらんこ", text);
+        if (quest != null && !fanz.isMisshionClear)
         {
-            click.check = true;
-            string[] text = new string[1] { "おす" };
+          
 
-            UIcanvas.SetCanvas("ぶらんこ", text);
+           
             questUI.SetActiveSlider(true);
             quest.enabled = true;
             questUI.SetUIActive(true);

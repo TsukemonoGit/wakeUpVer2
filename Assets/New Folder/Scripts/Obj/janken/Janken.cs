@@ -19,8 +19,8 @@ public  ViewCanvasControl view;
 
     //public JanCanManager janCanManager;
     //public JankenQuest quest;
-    //public HandController hand;
-    //public JankenAnimator playerHand;
+  public HandController hand;
+public JankenAnimator playerHand;
 
     private void Start()
     {
@@ -62,8 +62,8 @@ public  ViewCanvasControl view;
     {
        
         //anim
-        ///   hand.PonHand(false);
-        //    playerHand.Janken(false);
+           hand.PonHand(false);
+            playerHand.Janken(false);
         //
         //       janCanManager.ViewSelect(true);
         //→OnClick
@@ -79,8 +79,8 @@ public  ViewCanvasControl view;
         
         }
         //anim
-     //   hand.PonHand(true);
-   //     playerHand.Janken(true);
+        hand.PonHand(true);
+       playerHand.Janken(true);
    //     hand.SetHandAnim((int)otherSelect);
     //    playerHand.PonHand((int)mySelect);
         //
@@ -149,8 +149,8 @@ public  ViewCanvasControl view;
         yield return new WaitForSeconds(0.2f);
        
         //anim
-        //    hand.PonHand(false);
-        //   playerHand.Janken(false);
+            hand.PonHand(false);
+           playerHand.Janken(false);
         //
         // Debug.Log("おわり");
         //      janCanManager.SetText("おわり");
@@ -171,18 +171,21 @@ public  ViewCanvasControl view;
 
     public void OnClickGU()
     {
+        playerHand.PonHand(0);
         mySelect = Select.GU;
         state = State.JUDGE;
         StartCoroutine(JudgePhase());
     }
     public void OnClickCHO()
     {
+        playerHand.PonHand(1);
         mySelect = Select.CHO;
         state = State.JUDGE;
         StartCoroutine(JudgePhase());
          }
     public void OnClickPA()
     {
+        playerHand.PonHand(2);
         mySelect = Select.PA;
         state = State.JUDGE;
         StartCoroutine( JudgePhase());

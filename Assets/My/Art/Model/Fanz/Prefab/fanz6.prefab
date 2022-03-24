@@ -659,8 +659,8 @@ MonoBehaviour:
   materialY: {fileID: 0}
   materialB: {fileID: 0}
   materialW: {fileID: 0}
-  meshRenderer: {fileID: 0}
-  skinRenderer: {fileID: 0}
+  meshRenderer: {fileID: 3654346143096227199}
+  skinRenderer: {fileID: 8892421613703857928}
   manager: {fileID: 740340552558425908}
   constraint: {fileID: 0}
   particle: {fileID: 6516092355536397185, guid: 40c5deeac52c1284ea3f89016264ecbb,
@@ -731,6 +731,7 @@ MonoBehaviour:
   target: {fileID: 0}
   minKyori: 1
   maxSpeed: 6
+  gravity: -9.8
 --- !u!1 &2616207673917524803
 GameObject:
   m_ObjectHideFlags: 0

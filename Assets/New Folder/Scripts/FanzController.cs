@@ -17,7 +17,7 @@ public class FanzController : MonoBehaviour
     public Material materialY;
     public Material materialB;
     public Material materialW;
-    public MeshRenderer meshRenderer;
+    public SkinnedMeshRenderer meshRenderer;
     public SkinnedMeshRenderer skinRenderer;
     public FanzManager manager;
     // Start is called before the first frame update

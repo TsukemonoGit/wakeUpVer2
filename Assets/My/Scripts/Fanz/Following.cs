@@ -21,6 +21,14 @@ public class Following : MonoBehaviour
         manager = GetComponent<FanzManager>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        if (target == null)
+        {
+            target = GameObject.FindWithTag("Player").transform;
+            if (target == null)
+            {
+                Debug.Log("naiyo");
+            }
+        }
     }
     private void FixedUpdate()
     {
