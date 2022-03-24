@@ -6,10 +6,11 @@ public class Pause : MonoBehaviour
 {
     public GManager manager;
     public bool _nowPause;
- //   PlayerController player;
+   PlayerController player;
     private void Start()
     {
-        //player = manager.model.player;
+       
+        player = manager.model.player;
     }
     private void Update()
     {
@@ -27,16 +28,21 @@ public class Pause : MonoBehaviour
         if (!_nowPause)
         {
             _nowPause = true;
-   //        player.enabled = false;
-
+            //        player.enabled = false;
+            //     Quaternion rotation = player.CinemachineCameraTarget.transform.rotation;
+            //        rotation.y = 0;
+            //     player.CinemachineCameraTarget.transform.rotation = rotation;
+            //player.CinemachineCameraTarget.transform.LookAt(player.transform);
+            //player.CinemachineCameraTarget.transform.rotation = Quaternion.Euler(30, 0, 0);
+    
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         else
         {
             _nowPause = false;
-     //      player.enabled = true;
-
+            //      player.enabled = true;
+           
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }

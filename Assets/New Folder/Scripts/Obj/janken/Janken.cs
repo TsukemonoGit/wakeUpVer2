@@ -81,18 +81,13 @@ public JankenAnimator playerHand;
         //anim
         hand.PonHand(true);
        playerHand.Janken(true);
-   //     hand.SetHandAnim((int)otherSelect);
-    //    playerHand.PonHand((int)mySelect);
+        hand.SetHandAnim((int)otherSelect);
+       playerHand.PonHand((int)mySelect);
         //
         preSelect = otherSelect;
         yield return new WaitForSeconds(0.5f);
-        //    Debug.Log(otherSelect);
-        //string aite;
-        //if ((int)otherSelect == 0) aite = "ぐー";
-        //else if ((int)otherSelect == 1) aite = "ちょき";
-        //else aite = "ぱー";
 
-        //janCanManager.SetText("あいて："+aite);
+
         int judgeNum = mySelect - otherSelect;
 
         //あいこ
@@ -151,10 +146,7 @@ public JankenAnimator playerHand;
         //anim
             hand.PonHand(false);
            playerHand.Janken(false);
-        //
-        // Debug.Log("おわり");
-        //      janCanManager.SetText("おわり");
-        //       janCanManager.gameObject.SetActive(false);
+
       
         state = State.IDLE;
         quest.enabled = false;
@@ -178,6 +170,7 @@ public JankenAnimator playerHand;
     }
     public void OnClickCHO()
     {
+        Debug.Log("cho");
         playerHand.PonHand(1);
         mySelect = Select.CHO;
         state = State.JUDGE;

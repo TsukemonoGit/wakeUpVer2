@@ -39,7 +39,11 @@ public class Following : MonoBehaviour
         
         //Debug.Log(moveV);
         rb.velocity =Vector3.Scale (Vector3.up  , rb.velocity)+Vector3.Scale(scaleVec , moveV);
-        
+        if (transform.position.y < -1)
+        {
+            Debug.Log("tes");
+            rb.AddForce(Vector3.up ,ForceMode.Impulse);
+        }
 
     }
     void LookRotate()

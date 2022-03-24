@@ -8,9 +8,12 @@ public class ButtonManager : MonoBehaviour
     public CanvasContoller canCon;
    public int myNum;
     public TMP_Text textBox;
+
     public void OnClickButton()
     {
+
         canCon.selectButton = myNum;
+
     }
     
     
@@ -18,4 +21,5 @@ public class ButtonManager : MonoBehaviour
     {
         textBox.text = text;
     }
+  
 }

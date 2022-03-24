@@ -15,7 +15,7 @@ public class InputManager : MonoBehaviour
     public bool flyMode;
     public float fly;
     public bool say;
-
+    public int mausukando;
     
     [Header("設定")]
     public bool analogMovement;
@@ -30,7 +30,7 @@ public class InputManager : MonoBehaviour
    
     public void OnLook(InputValue value)
     {
-        look = value.Get<Vector2>();
+        look = value.Get<Vector2>()* Mathf.Pow( 10 , mausukando*0.1f);
     }
 
     //public void OnFire(InputValue value)

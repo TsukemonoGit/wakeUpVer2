@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
 	[Space(10)]
 	public float flySpeed;
+	public float SprintFlySpeed;
 	public GameObject husens; //add
 
 	[Header("接地チェック")]
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
     private float _speed;
     private float _animationBlend;
     private float _targetRotation = 0.0f;
-	private float _rotationVelocity;
+	private  float _rotationVelocity;
 	private float _verticalVelocity;
     private float _terminalVelocity = 53.0f;
 
@@ -319,8 +320,8 @@ public class PlayerController : MonoBehaviour
 	}
 	private void Fly()
 	{
-
-		_verticalVelocity = _input.fly * flySpeed;
+		float targetSpeed = _input.sprint ? SprintFlySpeed :flySpeed;
+		_verticalVelocity = _input.fly * targetSpeed;
 
 	}
 
