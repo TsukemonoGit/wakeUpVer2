@@ -16,7 +16,7 @@ public class sisofanz : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
        // for(int i = 0; i < collision.contacts.Length; i++) { 
-        Following following = collision.gameObject.GetComponent<Following>();
+        FanzManager following = collision.gameObject.GetComponent<FanzManager>();
         if (following == null) return;// break;
 
         //rb.AddForceAtPosition(torque, collision.contacts[0].point, ForceMode.Force);
