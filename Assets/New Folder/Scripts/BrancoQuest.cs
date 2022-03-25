@@ -15,7 +15,9 @@ public class BrancoQuest : MonoBehaviour
     int preCheck;
     public Color colorDefo;
     public Color UIcolor;
-    
+
+    public HousyuuFanz gohoubi;
+    public int gohoubiAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,7 @@ public class BrancoQuest : MonoBehaviour
             }
             
             max= checkNum > max ? checkNum : max;
-            if (max > clearLength * 0.7f)
+            if (max > clearLength * 0.5f)
             {
                  questUI.SetMessage("もっともっと");
                
@@ -48,6 +50,7 @@ public class BrancoQuest : MonoBehaviour
                 questUI.SetTextColor(UIcolor);
                 questUI.SetSliderColor(UIcolor);
                 questUI.SetMessage( "ぱーへくち");
+                gohoubi.GohoubiFanz(gohoubiAmount,transform.position+Vector3.forward*2);
                 StartCoroutine(Clear());        
              
             }

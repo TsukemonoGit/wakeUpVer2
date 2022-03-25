@@ -17,7 +17,7 @@ public class EnterCheck : MonoBehaviour
             FanzController fanz = other.GetComponent<FanzController>();
             if (fanz != null)
             {
-                Debug.Log(other);
+             //   Debug.Log(other);
                 for (int j = 0; j < gameCon.nowFollowings.Count; j++)
                 {
                   
