@@ -11,7 +11,7 @@ public class MovingUI : MonoBehaviour
     public Transform constraint;
     public Vector3 offset;
     new Camera camera;
-
+    public TMP_Text message2;
     
     void Start()
     {

@@ -17,9 +17,10 @@ public class ButtonManager : MonoBehaviour
     }
     
     
-    public void  SetMessageText(string text)
+    public void  SetMessageText(string text , int fontsize=24)
     {
         textBox.text = text;
+        textBox.fontSize = fontsize;
     }
   
 }

@@ -44,4 +44,8 @@ public class QuestCanvasController : MonoBehaviour
     {
         move1.gameObject.SetActive(value);
     }
+    public void SetMessage2(string message2)
+    {
+        move1.message2.text = message2;
+    }
 }
