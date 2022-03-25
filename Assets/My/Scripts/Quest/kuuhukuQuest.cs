@@ -69,7 +69,7 @@ public class kuuhukuQuest : MonoBehaviour
                 queCan.SetMessage(messageQ[0]);
                 queCan.SetMessage2(message2[0]);
                 queCan.SetTextColor(color[0]);
-
+                cook = CookState.Questing;
                 break;
             case CookState.Questing:
                 break;

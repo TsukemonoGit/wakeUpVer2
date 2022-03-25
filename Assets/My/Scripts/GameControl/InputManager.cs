@@ -7,7 +7,8 @@ public class InputManager : MonoBehaviour
 {
     public Vector2 move;
     public Vector2 look;
-    //public bool fire;
+    public bool fire;
+    
     public bool pause;
     public bool sprint;
     public bool jump;
@@ -64,6 +65,10 @@ public class InputManager : MonoBehaviour
        say= value.isPressed;
     }
 
+    public void OnFire(InputValue value)
+    {
+        fire = value.isPressed;
+    }
     //カーソル
     private void OnApplicationFocus(bool hasFocus)
     {
