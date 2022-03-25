@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //アイテム収集クエスト
 //料理クエスト
-public enum CookState { Idle,Questing,QuestClear , Clear}
+public enum CookState { Idle,Questing,QuestClear ,QuestDame, Clear}
 public class kuuhukuQuest : MonoBehaviour
 {
     public CookState cook = CookState.Idle;
@@ -90,13 +90,31 @@ public class kuuhukuQuest : MonoBehaviour
                 queCan.SetMessage2(message2[2]);
                 queCan.SetTextColor(color[1]);
                 queCan.SetSliderColor(color[1]);
-                cook = CookState.Questing;
+                cook = CookState.Clear;
                 fanz.GetComponent<FanzController>().isMisshionClear = true;
                 fanz.transform.rotation = Quaternion.identity;
                gohoubi. GohoubiFanz(gohoubiAmount,transform.position);
               
                 cook = CookState.Clear;
                 break;
+
+
+            case CookState.QuestDame:
+                queCan.SetUIActive(true);
+                queCan.SetConstraint(constraint);
+                queCan.SetSliderMax(sliderMaxValue);
+                queCan.SetActiveSlider(true);
+                queCan.SetSliderValue(0);
+                queCan.SetMessage(messageQ[0]);
+                queCan.SetMessage2(message2[3]);
+                queCan.SetTextColor(color[0]);
+                queCan.SetSliderColor(color[0]);
+                cook = CookState.Questing;
+           
+               
+             
+                break;
+
             default:
                 break;
 
