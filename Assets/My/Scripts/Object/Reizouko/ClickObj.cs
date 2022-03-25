@@ -26,8 +26,11 @@ public class ClickObj : MonoBehaviour
             }
             obj.transform.parent = reizouko.omuParent;
             obj.transform.localPosition = Vector3.zero;
-            reizouko.quest.cook = changeState;
             reizouko.nowSelect = this;
+            if (!reizouko.quest.GetComponent<FanzController>().isMisshionClear)
+            {
+                reizouko.quest.cook = changeState;
+            }
         }
     }
     public void SetSyokiPos()
