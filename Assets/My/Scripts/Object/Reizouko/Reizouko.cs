@@ -7,7 +7,9 @@ public class Reizouko : MonoBehaviour
     public kuuhukuQuest quest;
     public Animator anim1;
     public Animator anim2;
-   // public bool inTrigger;
+    public GameObject omuraisu;
+    public Transform omuParent;
+  public bool inTrigger;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
@@ -18,20 +20,38 @@ public class Reizouko : MonoBehaviour
             anim2.SetBool("Open", true);
             anim1.SetBool("Close", false);
             anim2.SetBool("Close", false);
-            //          inTrigger = true;   
+          //     inTrigger = true;   
         }
     }
     private void OnTriggerExit(Collider other)
     {
         CharacterController controller = other.GetComponent<CharacterController>();
-        if (controller != null && quest.cook==CookState.Questing)
+        if (controller != null && anim1.GetBool("Open"))
         {
-            //         inTrigger = false;
+       //             inTrigger = false;
             anim1.SetBool("Close", true);
             anim2.SetBool("Close", true);
             anim1.SetBool("Open", false);
             anim2.SetBool("Open", false);
         }
     }
-
+    public void PointerClick()
+    {
+        if (anim1.GetBool("Open"))
+        {
+            //Debug.Log("GetOmu");
+            omuraisu.transform.parent = omuParent;
+            omuraisu.transform.localPosition = Vector3.zero;
+            quest.cook = CookState.QuestClear;
+        }
+    }
+    private void Update()
+    {
+       if(quest.GetComponent<FanzController>().isMisshionClear &&anim1.GetBool("Close"))
+        {
+        //    Debug.Log("ters");
+            omuraisu.SetActive(false);
+            this.enabled=(false);
+        } 
+    }
 }

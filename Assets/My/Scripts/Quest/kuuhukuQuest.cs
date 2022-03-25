@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //アイテム収集クエスト
 //料理クエスト
-public enum CookState { Idle,Questing,CollectZairyo,CookingClear,QuestClear}
+public enum CookState { Idle,Questing,QuestClear , Clear}
 public class kuuhukuQuest : MonoBehaviour
 {
     public CookState cook = CookState.Idle;
@@ -13,6 +13,9 @@ public class kuuhukuQuest : MonoBehaviour
     FanzManager fanz;
     QuestCanvasController queCan;
      CanvasContoller view;
+
+    public HousyuuFanz gohoubi;
+    public int gohoubiAmount = 3;
 
     [Space(10)]
     [Header("動く方のキャンバス")]
@@ -29,6 +32,7 @@ public class kuuhukuQuest : MonoBehaviour
     public int buttonNum = 1;
     public string[] buttonMessage;//ボタン２個じゃなくて１この２パターン
 
+   [SerializeField]
     bool nowView;
 
     private void Start()
@@ -61,23 +65,39 @@ public class kuuhukuQuest : MonoBehaviour
        
         switch (cook)
         {
-            case CookState.Idle:
+            case CookState.Idle: 
+            case CookState.Questing:
                 queCan.SetUIActive(true);
                 queCan.SetConstraint(constraint);
                 queCan.SetSliderMax (sliderMaxValue);
                 queCan.SetActiveSlider(true);
+                queCan.SetSliderValue(0);
                 queCan.SetMessage(messageQ[0]);
                 queCan.SetMessage2(message2[0]);
                 queCan.SetTextColor(color[0]);
+                queCan.SetSliderColor(color[0]);
+
                 cook = CookState.Questing;
                 break;
-            case CookState.Questing:
-                break;
-            case CookState.CollectZairyo:
-                break;
-            case CookState.CookingClear:
-                break;
+        
             case CookState.QuestClear:
+                queCan.SetUIActive(true);
+                queCan.SetConstraint(constraint);
+                queCan.SetSliderMax(sliderMaxValue);
+                queCan.SetActiveSlider(true);
+                queCan.SetSliderValue(sliderMaxValue);
+                queCan.SetMessage(messageQ[1]);
+                queCan.SetMessage2(message2[2]);
+                queCan.SetTextColor(color[1]);
+                queCan.SetSliderColor(color[1]);
+                cook = CookState.Questing;
+                fanz.GetComponent<FanzController>().isMisshionClear = true;
+                fanz.transform.rotation = Quaternion.identity;
+               gohoubi. GohoubiFanz(gohoubiAmount,transform.position);
+              
+                cook = CookState.Clear;
+                break;
+            default:
                 break;
 
         }
@@ -87,4 +107,5 @@ public class kuuhukuQuest : MonoBehaviour
         view.SetCanvas();
         queCan.SetUIActive(false);
     }
+  
 }
