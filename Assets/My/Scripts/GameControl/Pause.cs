@@ -7,14 +7,15 @@ public class Pause : MonoBehaviour
     public GManager manager;
     public bool _nowPause;
    PlayerController player;
+
     private void Start()
     {
        
         player = manager.model.player;
-    }
+      }
     private void Update()
     {
-
+    
         if (manager.model.input.pause)
         {
             CursorAndPlayer();

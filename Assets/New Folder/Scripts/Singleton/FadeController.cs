@@ -8,7 +8,7 @@ public class FadeController : MonoBehaviour
 { 
     Material fadeMaterial;
     bool nowFadeIn;
-     bool nowFadeOut;
+    bool nowFadeOut;
     float interval = 2f;
     float  nowFloat=-1;
     public int loadSceneIndex;

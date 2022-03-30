@@ -13,7 +13,8 @@ public class Reizouko : MonoBehaviour
     public bool isOpen;
     public ClickObj[] objs;
     public ClickObj nowSelect;
-
+    public TMPro.TMP_Text  hint;
+    public string hintMessage;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +26,7 @@ public class Reizouko : MonoBehaviour
             anim2.SetBool("Open", true);
             anim1.SetBool("Close", false);
             anim2.SetBool("Close", false);
+            hint.text = hintMessage;
           //     inTrigger = true;   
         }
     }
@@ -39,6 +41,7 @@ public class Reizouko : MonoBehaviour
             anim2.SetBool("Close", true);
             anim1.SetBool("Open", false);
             anim2.SetBool("Open", false);
+            hint.text =null;
         }
     }
     //public void PointerClick()
